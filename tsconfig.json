@@ -8,6 +8,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "lib": [
+      "es2015",
+      "es2015.promise",
+      "dom"
+    ]
   }
 }

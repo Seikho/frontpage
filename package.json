@@ -2,9 +2,11 @@
   "name": "frontpage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "back/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "postbuild": "browserify -e front/index.js -o front/bundle.js -r fs:browserify-fs -t brfs",
     "bundle": "browserify -e front/index.js -o front/bundle.js -r fs:browserify-fs -t brfs"
   },
   "repository": {

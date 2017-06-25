@@ -31,3 +31,12 @@ interface Publication {
     redirectUrl: string | null
     blogState: string | null
 }
+
+interface TaxonomyItem {
+    id: string
+    parentId: string | null
+    topic: string,
+    title: string
+}
+
+type Taxonomy = TaxonomyItem[]

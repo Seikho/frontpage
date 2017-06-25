@@ -16,15 +16,6 @@ interface TaxonomyResponse {
     secondLevel: TaxonomyResponseItem[]
 }
 
-export interface TaxonomyItem {
-    id: string
-    parentId: string | null
-    topic: string,
-    title: string
-}
-
-export type Taxonomy = TaxonomyItem[]
-
 let cache: Taxonomy | null = null
 let lastModified = Date.now()
 

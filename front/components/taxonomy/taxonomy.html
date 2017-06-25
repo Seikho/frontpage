@@ -1,0 +1,25 @@
+<div class="form-autocomplete">
+    <div class="form-autocomplete-input form-input">
+        <!-- ko foreach: selected -->
+        <label class="chip">
+            <span data-bind="text: $data"></span>
+            <button class="btn btn-clear" data-bind="click: $parent.removeItem"></button>
+        </label>
+        <!-- /ko -->
+
+        <input class="form-input" type="text" data-bind="textInput: taxonomyInput" />
+    </div>
+
+    <!-- ko if: autocompleteList().length > 0 -->
+    <ul class="menu" data-bind="foreach: autocompleteList">
+        <li class="menu-item">
+            <a>
+                <div class="tile tile-centered">
+                    <div class="tile-content" data-bind="text: $data, click: $parent.addItem">
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- /ko -->
+</div>
